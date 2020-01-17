@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Teste from '../components/Card'
+import Card from '../components/Card'
 
 const App = () => {
   const [pokemon, setPokemon] = useState({
@@ -22,7 +22,7 @@ const App = () => {
   }, [])
 
   return (
-      <Teste
+      <Card
         name={pokemon.nome}
         description='Este é Minguardi'
         src={pokemon.image} 
