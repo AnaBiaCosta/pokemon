@@ -11,9 +11,11 @@ const App = () => (
   />
 
   <Teste 
-    name='Mingadi'
+    name='MinCard'
     description='Este é Minguardi'
-    src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ZCW_Vq1R49qNAlfMryR16VYUJ8lpQvyLKG6ujYeW5BnxAKUz&s'/>
+    src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ZCW_Vq1R49qNAlfMryR16VYUJ8lpQvyLKG6ujYeW5BnxAKUz&s'
+  />
+  
   </>
 )
 
