@@ -10,8 +10,10 @@ const App = () => (
     src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRYXuCsAPfe-LcVuUiNGFlEx7JDeP_T6Ycb8iqIreurYuhQ8HM_'
   />
 
-  <Teste src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ZCW_Vq1R49qNAlfMryR16VYUJ8lpQvyLKG6ujYeW5BnxAKUz&s'/>
-
+  <Teste 
+    name='Mingadi'
+    description='Este é Minguardi'
+    src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ZCW_Vq1R49qNAlfMryR16VYUJ8lpQvyLKG6ujYeW5BnxAKUz&s'/>
   </>
 )
 

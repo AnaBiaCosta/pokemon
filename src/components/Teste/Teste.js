@@ -1,11 +1,10 @@
 import React from 'react'
 import { Body, ImageTeste } from './Teste.style'
 
-const Teste = ({ src }) => (
+const Teste = ({ src, name, description }) => (
     <Body >
-        <h1>Mingardi</h1>
-        <p>Este é Mingardi</p>
-
+        <h1>{name}</h1>
+        <p>{description}</p>
         <ImageTeste src={src}/>
     </ Body>
 )
