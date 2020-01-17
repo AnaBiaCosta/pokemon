@@ -1,12 +1,12 @@
 import React from 'react'
-import { Title, Wrapper, Image, TitleRosa } from './Card.style'
+import { Body, Image } from './Card.style'
 
-const Card = ({ text, src, batata }) => (
-  <Wrapper>
-    <Title bold={batata}>{text}</Title>
-    <TitleRosa bold={batata}>{text}</TitleRosa>
-    <Image src={src} />
-  </Wrapper>
+const Card = ({ src, name, description }) => (
+    <Body >
+        <h1>{name}</h1>
+        <p>{description}</p>
+        <Image src={src}/>
+    </ Body>
 )
 
 export default Card

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../components/Card'
-import Teste from '../components/Teste'
+import Teste from '../components/Card'
 
 const App = () => {
-  const [text, setText] = useState('texto')
+  const [pokemon, setPokemon] = useState({
+    nome: null,
+    image: null,
+  })
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon/ditto/')
@@ -12,23 +14,19 @@ const App = () => {
       })
       .then((res) => {
         console.log(res)
+        setPokemon({
+          nome: res.name,
+          image: res.sprites.front_default
+        })
       })
-  }, [text])
+  }, [])
 
   return (
-    <>
-      <Card
-        batata={Math.random() > 0.5}
-        text={text}
-      />
-
-      <button onClick={() => setText('textao')}>SOCORRO</button>
-
       <Teste
-        name='Mingadi'
+        name={pokemon.nome}
         description='Este é Minguardi'
-        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ZCW_Vq1R49qNAlfMryR16VYUJ8lpQvyLKG6ujYeW5BnxAKUz&s' />
-    </>
+        src={pokemon.image} 
+      />
   )
 }
 

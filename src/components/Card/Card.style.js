@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
-export const Title = styled.h1`
-  background: blue;
+export const Body = styled.div `
+  width: 20%;
+  margin: 50px auto;
   color: white;
-  font-weight: ${({ bold }) => bold ? 'bold': 'normal'};
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  background-color: #845EC2;
+  text-align: center;
+  padding: 50px;
 `
 
-export const TitleRosa = styled(Title)`
-  color: pink;
+export const Image = styled.img`
+  width: 100%
 `
-
-export const Wrapper = styled.div``
-
-export const Image = styled.img``
