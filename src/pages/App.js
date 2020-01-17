@@ -14,6 +14,7 @@ const App = () => {
         console.log(res)
       })
   }, [text])
+
   return (
     <>
       <Card
