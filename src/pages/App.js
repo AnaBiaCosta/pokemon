@@ -7,13 +7,16 @@ const App = () => {
     image: null,
   })
 
+  const [description, setDescription] = useState({
+    desc: null
+  })
+
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/ditto/')
+    fetch('https://pokeapi.co/api/v2/pokemon/pikachu/')
       .then((res) => {
         return res.json()
       })
       .then((res) => {
-        console.log(res)
         setPokemon({
           nome: res.name,
           image: res.sprites.front_default
@@ -21,12 +24,33 @@ const App = () => {
       })
   }, [])
 
+  useEffect(() => {
+    fetch('https://pokeapi.co/api/v2/pokemon-species/pikachu')
+      .then((res) => {
+        return res.json()
+      })
+
+      .then((res) => {
+        const array = res.flavor_text_entries
+        
+        const findDesc = array.filter(item => { 
+          return item.version.name === 'red'
+        })
+
+        const result = findDesc[0].flavor_text
+
+        setDescription({
+          desc: result
+        })
+      })
+  }, [])
+
   return (
-      <Card
-        name={pokemon.nome}
-        description='Este é Minguardi'
-        src={pokemon.image} 
-      />
+    <Card
+      name={pokemon.nome}
+      src={pokemon.image}
+      description={description.desc}
+    />
   )
 }
 
